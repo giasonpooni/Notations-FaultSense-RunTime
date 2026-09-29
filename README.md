@@ -2,6 +2,14 @@
 
 **Monitor residuals and changes while retaining thresholds, uncertainty and diagnostic state.**
 
+## Notation Systems and this instrument
+
+**Notation Systems develops evidence-backed industrial intelligence and computational instrumentation, connecting expert knowledge and observations to bounded, inspectable work.** Its domains remain **PAYLOAD** (physical operations, facilities, materials and logistics, including Caravan), **LANDSHARK** (land/site and spatial constraints), and **TRADEWIND** (contracts, prices and exposure). PayloadOS/ESM govern industrial evidence/state; Dossier Services packages scoped service outputs.
+
+This instrument owns **residual statistics and explicit diagnostic transitions**, not physical fault confirmation or equipment control. [Notations Systems Terminal (NET)](https://github.com/giasonpooni/Notations-Systems-Terminal) coordinates typed work while specialist repositories retain their mathematics and licences. Existing NET / `net` / `ciw` and `fdir` identities remain intact.
+
+The intended expertise-amplification path is **expert input → reviewed specification → bounded execution → observations and checks → authorized integration/release**. Manufacturing, robotics, materials, GIS/remote sensing, DSP and analytics are workload families, not completed adapters. Cartesian Graphics is the firm's games/graphics/physics/simulation label; 1792 is a reference workload, not validation of a diagnostic threshold. Evidence, operation, execution, result and verification remain distinct. General capture and dependency-aware rebuilding are targets; logical containers are not OS security sandboxes. An expert heuristic remains an attributed hypothesis until tested. Existing APIs, thresholds, status meanings and licences are unchanged. Evaluate accepted useful work alongside human effort, cost, rework and domain-specific validation.
+
 | NET micro-tool | Identity and scope |
 | --- | --- |
 | User-facing name | **Fault Monitor** |
