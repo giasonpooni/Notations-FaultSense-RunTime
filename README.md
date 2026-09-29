@@ -1,20 +1,20 @@
-# Fault Monitor
+# Notations FaultSense
 
-**Monitor residuals and changes while retaining thresholds, uncertainty and diagnostic state.**
+**Evaluate residuals and changes while retaining thresholds, uncertainty and diagnostic state.**
+
+[Run](#install-and-run) · [Operations](#two-explicit-diagnostic-operations) · [Research profile](#research-profile)
 
 ## Notation Systems and this instrument
 
-**Notation Systems develops evidence-backed industrial intelligence and computational instrumentation, connecting expert knowledge and observations to bounded, inspectable work.** Its domains remain **PAYLOAD** (physical operations, facilities, materials and logistics, including Caravan), **LANDSHARK** (land/site and spatial constraints), and **TRADEWIND** (contracts, prices and exposure). PayloadOS/ESM govern industrial evidence/state; Dossier Services packages scoped service outputs.
+**Notation Systems — Frontier Tooling and Instrumentation for Digital Futures.** FaultSense provides residual statistics and explicit diagnostic transitions, not physical fault confirmation or equipment control. [Notations Systems Terminal](https://github.com/giasonpooni/Notations-Systems-Terminal) coordinates supported workflows while this provider retains its mathematics.
 
-This instrument owns **residual statistics and explicit diagnostic transitions**, not physical fault confirmation or equipment control. [Notations Systems Terminal (NET)](https://github.com/giasonpooni/Notations-Systems-Terminal) coordinates typed work while specialist repositories retain their mathematics and licences. Existing NET / `net` / `ciw` and `fdir` identities remain intact.
-
-The intended expertise-amplification path is **expert input → reviewed specification → bounded execution → observations and checks → authorized integration/release**. Manufacturing, robotics, materials, GIS/remote sensing, DSP and analytics are workload families, not completed adapters. Cartesian Graphics is the firm's games/graphics/physics/simulation label; 1792 is a reference workload, not validation of a diagnostic threshold. Evidence, operation, execution, result and verification remain distinct. General capture and dependency-aware rebuilding are targets; logical containers are not OS security sandboxes. An expert heuristic remains an attributed hypothesis until tested. Existing APIs, thresholds, status meanings and licences are unchanged. Evaluate accepted useful work alongside human effort, cost, rework and domain-specific validation.
+The current repository is `Notations-FaultSense-RunTime`; FDIR / `fdir`, existing status codes and historical contracts remain. The firm's operational products and Cartesian Graphics' creative/IP projects retain separate state, evidence and release authority. [Organization profile](https://github.com/giasonpooni/Notations-Systems-Terminal/blob/b41b84922d4963a9206202029afd1e78b9451f9c/PUBLIC_POSITIONING.md).
 
 | NET micro-tool | Identity and scope |
 | --- | --- |
-| User-facing name | **Fault Monitor** |
+| User-facing name | **FaultSense** (historical display: Fault Monitor) |
 | Proposed NET operation family | `diagnostics.faults` |
-| Implementation repository | `Fault-Detection-Isolation-Runtime` |
+| Implementation repository | `Notations-FaultSense-RunTime` |
 | Existing provider and import | Fault Detection and Isolation Runtime / FDIR; `fdir` |
 | Existing operations | `evaluate_residual` and `cusum_step` |
 | Current boundary | Statistical anomaly detection; physical fault confirmation and cause isolation are not implemented |
@@ -27,10 +27,10 @@ not proof of a broken component; a nominal result is not proof of correct operat
 NET owns session composition and dispatch; this provider owns residual statistics
 and explicit CUSUM transitions. Callers own the chosen scalar stream and prior
 monitor state. Evidence, operation specifications, execution attempts and
-verification records remain distinct. Repository URLs, imports, contracts,
-existing status codes and licence terms are unchanged.
+verification records remain distinct. Imports, contracts, existing status codes
+and licence terms are unchanged.
 
-[Notations Engineering Terminal (CIW)](https://github.com/giasonpooni/Notations-Engineering-Terminal) · [Stack placement and ownership](docs/STACK.md) · [License](LICENSE)
+[Notations Systems Terminal (CIW)](https://github.com/giasonpooni/Notations-Systems-Terminal) · [Stack placement and ownership](docs/STACK.md) · [License](LICENSE)
 
 FDIR is a bounded statistical diagnostics instrument. It evaluates estimator innovations and scalar residual streams, preserving the inputs, their declared identities, the chosen thresholds, and each sequential transition. The current foundation implements anomaly detection; **physical fault confirmation and cause isolation are not implemented**.
 
@@ -61,7 +61,7 @@ Solid arrows show the two current local APIs. The package does not automatically
 feed NIS or a selected residual component into CUSUM: the caller defines the
 scalar stream and supplies its prior state. Both outputs are statistical
 diagnostics; neither path establishes physical fault isolation or authorizes
-an equipment action. See the [system diagram atlas](https://github.com/giasonpooni/Notations-Engineering-Terminal/blob/main/docs/DIAGRAMS.md).
+an equipment action. See the [system diagram atlas](https://github.com/giasonpooni/Notations-Systems-Terminal/blob/main/docs/DIAGRAMS.md).
 
 ## Install and run
 
@@ -94,7 +94,7 @@ Thresholds are caller-supplied. The instrument makes no automatic chi-square cal
 
 ## System role
 
-GSIE can provide innovations and their innovation covariance. FDIR computes diagnostics over those inputs. SET retains offline evaluation and benchmarking; Notations Engineering Terminal (CIW) can display and inspect diagnostic records. FDIR does not change estimator state, remove observations, shut down sensors, admit evidence, or issue controls. See [STACK_ROLE.md](STACK_ROLE.md).
+GSIE can provide innovations and their innovation covariance. FDIR computes diagnostics over those inputs. SET retains offline evaluation and benchmarking; Notations Systems Terminal (CIW) can display and inspect diagnostic records. FDIR does not change estimator state, remove observations, shut down sensors, admit evidence, or issue controls. See [STACK_ROLE.md](STACK_ROLE.md).
 
 This repository provides standalone functions and a synthetic replay. The GSIE, SET, and CIW positions describe ownership boundaries; this release does not contain live adapters to those repositories.
 
@@ -110,6 +110,14 @@ python examples/exchange.py
 The example exports NIS as a dimensionless scalar diagnostic, with score covariance `not_applicable`, and retains the full input innovation covariance and residual diagnostics inside the computation record. It uses a synthetic all-zero revision and explicit timestamp; neither is an attestation. Result, operation, execution, and source references remain distinct; no verification record is fabricated. This demonstrates exchange conformance, not native execution in CIW or independent scientific verification.
 
 See [CONTRACT.md](CONTRACT.md) for validated inputs and transition semantics and [docs/NUMERICS.md](docs/NUMERICS.md) for equations, numerical limits, and analytical verification.
+
+## Research profile
+
+**Question:** what does a statistical disagreement establish, and what remains ambiguous? The current innovation and CUSUM specimens let the programme test threshold behavior, covariance assumptions, sequence history and retained diagnostic state.
+
+Future evaluation should distinguish simulated ground truth, measured observations and expert hypotheses; report false alarms and missed detections only against a defined labelled reference. A detector's output is not a root-cause finding. Measure end-to-end cost and rework without promoting unknown telemetry to zero.
+
+[Shared research protocol](https://github.com/giasonpooni/Notations-Systems-Terminal/blob/b41b84922d4963a9206202029afd1e78b9451f9c/RESEARCH_PROGRAMME.md). General inference, new language providers and CUDA acceleration remain separate work. This documentation changes no numerical implementation, tests, thresholds, permissions or release status and reports no new qualification run.
 
 ## License
 
