@@ -4,11 +4,25 @@
 
 [Run](#install-and-run) · [Operations](#two-explicit-diagnostic-operations) · [Research profile](#research-profile)
 
-## Notation Systems and this instrument
+## Organization
 
-**Notation Systems — Frontier Tooling and Instrumentation for Digital Futures.** FaultSense provides residual statistics and explicit diagnostic transitions, not physical fault confirmation or equipment control. [Notations Systems Terminal](https://github.com/giasonpooni/Notations-Systems-Terminal) coordinates supported workflows while this provider retains its mathematics.
+**Notation Systems Inc** is the parent organization: a scientific computing and systems engineering company developing computational instruments, software and interactive environments for understanding and building physical and virtual systems.
 
-The current repository is `Notations-FaultSense-RunTime`; FDIR / `fdir`, existing status codes and historical contracts remain. The firm's operational products and Cartesian Graphics' creative/IP projects retain separate state, evidence and release authority. [Organization profile](https://github.com/giasonpooni/Notations-Systems-Terminal/blob/b41b84922d4963a9206202029afd1e78b9451f9c/PUBLIC_POSITIONING.md).
+The company's development direction connects measurement, state estimation and sensor fusion, scientific modelling, simulation and execution, from materials and machines to interactive worlds.
+
+| Division | Focus |
+| --- | --- |
+| **Notations Gaming** | Games, graphics, world building, interactive environments and gameplay simulation. |
+| **Notations Manufacturing** | Design, machinery integration, process development, fabrication and production systems. |
+| **Notations Laboratories** | Research and experimental validation in scientific computing, measurement, physics and chemistry modelling, materials and simulation. |
+
+**Repository role:** Fault Monitor contributes residual and change detection to **Notations Laboratories**, supporting diagnostic work for **Notations Manufacturing**. Its statistical outputs can inform broader state estimation workflows; an anomaly is not a confirmed physical fault or permission to control machinery.
+
+## Instrument role
+
+**Notation Systems — Frontier Tooling and Instrumentation for Digital Futures.** FaultSense provides residual statistics and explicit diagnostic transitions, not physical fault confirmation or equipment control. [Notations Systems Terminal](https://github.com/atomtrapping/Notations-Systems-Terminal) coordinates supported workflows while this provider retains its mathematics.
+
+The current repository is `Notations-FaultSense-RunTime`; FDIR / `fdir`, existing status codes and historical contracts remain. The firm's operational products and Notations Gaming' creative/IP projects retain separate state, evidence and release authority. [Current organization](#organization).
 
 | NET micro-tool | Identity and scope |
 | --- | --- |
@@ -30,7 +44,7 @@ monitor state. Evidence, operation specifications, execution attempts and
 verification records remain distinct. Imports, contracts, existing status codes
 and licence terms are unchanged.
 
-[Notations Systems Terminal (CIW)](https://github.com/giasonpooni/Notations-Systems-Terminal) · [Stack placement and ownership](docs/STACK.md) · [License](LICENSE)
+[Notations Systems Terminal (CIW)](https://github.com/atomtrapping/Notations-Systems-Terminal) · [Stack placement and ownership](docs/STACK.md) · [License](LICENSE)
 
 FDIR is a bounded statistical diagnostics instrument. It evaluates estimator innovations and scalar residual streams, preserving the inputs, their declared identities, the chosen thresholds, and each sequential transition. The current foundation implements anomaly detection; **physical fault confirmation and cause isolation are not implemented**.
 
@@ -61,7 +75,7 @@ Solid arrows show the two current local APIs. The package does not automatically
 feed NIS or a selected residual component into CUSUM: the caller defines the
 scalar stream and supplies its prior state. Both outputs are statistical
 diagnostics; neither path establishes physical fault isolation or authorizes
-an equipment action. See the [system diagram atlas](https://github.com/giasonpooni/Notations-Systems-Terminal/blob/main/docs/DIAGRAMS.md).
+an equipment action. See the [system diagram atlas](https://github.com/atomtrapping/Notations-Systems-Terminal/blob/main/docs/DIAGRAMS.md).
 
 ## Install and run
 
@@ -117,7 +131,7 @@ See [CONTRACT.md](CONTRACT.md) for validated inputs and transition semantics and
 
 Future evaluation should distinguish simulated ground truth, measured observations and expert hypotheses; report false alarms and missed detections only against a defined labelled reference. A detector's output is not a root-cause finding. Measure end-to-end cost and rework without promoting unknown telemetry to zero.
 
-[Shared research protocol](https://github.com/giasonpooni/Notations-Systems-Terminal/blob/b41b84922d4963a9206202029afd1e78b9451f9c/RESEARCH_PROGRAMME.md). General inference, new language providers and CUDA acceleration remain separate work. This documentation changes no numerical implementation, tests, thresholds, permissions or release status and reports no new qualification run.
+[Historical research protocol](https://github.com/atomtrapping/Notations-Systems-Terminal/blob/b41b84922d4963a9206202029afd1e78b9451f9c/RESEARCH_PROGRAMME.md). General inference, new language providers and CUDA acceleration remain separate work. This documentation changes no numerical implementation, tests, thresholds, permissions or release status and reports no new qualification run.
 
 ## License
 
