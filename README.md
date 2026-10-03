@@ -22,7 +22,7 @@ monitor state. Evidence, operation specifications, execution attempts and
 verification records remain distinct. Repository URLs, imports, contracts,
 existing status codes and licence terms are unchanged.
 
-[Notations Engineering Terminal (CIW)](https://github.com/giasonpooni/Notations-Engineering-Terminal) · [Stack placement and ownership](docs/STACK.md) · [License](LICENSE)
+[Notations Engineering Terminal (CIW)](https://github.com/atomtrapping/Notations-Systems-Terminal) · [Stack placement and ownership](docs/STACK.md) · [License](LICENSE)
 
 FDIR is a bounded statistical diagnostics instrument. It evaluates estimator innovations and scalar residual streams, preserving the inputs, their declared identities, the chosen thresholds, and each sequential transition. The current foundation implements anomaly detection; **physical fault confirmation and cause isolation are not implemented**.
 
@@ -67,7 +67,7 @@ Solid arrows show the two current local APIs. The package does not automatically
 feed NIS or a selected residual component into CUSUM: the caller defines the
 scalar stream and supplies its prior state. Both outputs are statistical
 diagnostics; neither path establishes physical fault isolation or authorizes
-an equipment action. See the [system diagram atlas](https://github.com/giasonpooni/Notations-Engineering-Terminal/blob/main/docs/DIAGRAMS.md).
+an equipment action. See the [system diagram atlas](https://github.com/atomtrapping/Notations-Systems-Terminal/blob/main/docs/DIAGRAMS.md).
 
 ## Install and run
 
