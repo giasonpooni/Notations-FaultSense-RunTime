@@ -35,6 +35,18 @@ The `fdir` Python package provides:
 
 Outputs use `nominal` and `statistical_anomaly`. A `nominal` result means the chosen test did not cross its threshold on that input; it does not prove correct operation. An anomaly does not identify a failed sensor, prove a physical defect, or authorize an action.
 
+## Organization
+
+**Notation Systems Inc** is the parent organization.
+
+| Division | Focus |
+| --- | --- |
+| **Notations Gaming** | Games, graphics and interactive worlds. |
+| **Notations Manufacturing** | Industrial design, materials and manufacturing systems. |
+| **Notations Laboratories** | Research, scientific computing, simulation and experimental validation. |
+
+This repository contributes bounded diagnostic and fault monitoring tools to **Notations Laboratories**, supporting industrial systems in **Notations Manufacturing**.
+
 ## Two explicit diagnostic operations
 
 ```mermaid
