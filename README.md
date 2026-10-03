@@ -1,39 +1,8 @@
-# Fault Monitor
+# Notations FaultSense
 
-**Monitor residuals and changes while retaining thresholds, uncertainty and diagnostic state.**
+**Evaluate residuals and changes while retaining thresholds, uncertainty and diagnostic state.**
 
-| NET micro-tool | Identity and scope |
-| --- | --- |
-| User-facing name | **Fault Monitor** |
-| Proposed NET operation family | `diagnostics.faults` |
-| Implementation repository | `Fault-Detection-Isolation-Runtime` |
-| Existing provider and import | Fault Detection and Isolation Runtime / FDIR; `fdir` |
-| Existing operations | `evaluate_residual` and `cusum_step` |
-| Current boundary | Statistical anomaly detection; physical fault confirmation and cause isolation are not implemented |
-
-`diagnostics.faults` is the agreed NET-facing target, **not a newly installed
-command, automatic diagnosis service or live equipment-control adapter**. Use
-the standalone functions and examples below. A threshold crossing is an anomaly,
-not proof of a broken component; a nominal result is not proof of correct operation.
-
-NET owns session composition and dispatch; this provider owns residual statistics
-and explicit CUSUM transitions. Callers own the chosen scalar stream and prior
-monitor state. Evidence, operation specifications, execution attempts and
-verification records remain distinct. Repository URLs, imports, contracts,
-existing status codes and licence terms are unchanged.
-
-[Notations Engineering Terminal (CIW)](https://github.com/atomtrapping/Notations-Systems-Terminal) · [Stack placement and ownership](docs/STACK.md) · [License](LICENSE)
-
-FDIR is a bounded statistical diagnostics instrument. It evaluates estimator innovations and scalar residual streams, preserving the inputs, their declared identities, the chosen thresholds, and each sequential transition. The current foundation implements anomaly detection; **physical fault confirmation and cause isolation are not implemented**.
-
-The `fdir` Python package provides:
-
-| Operation | Implemented behavior |
-| --- | --- |
-| `evaluate_residual` | Cholesky whitening, marginal normalization, normalized innovation squared (NIS), and explicit threshold comparison |
-| `cusum_step` | Pure positive, negative, or two-sided CUSUM transition with explicit prior state, drift, threshold, and optional post-alarm reset |
-
-Outputs use `nominal` and `statistical_anomaly`. A `nominal` result means the chosen test did not cross its threshold on that input; it does not prove correct operation. An anomaly does not identify a failed sensor, prove a physical defect, or authorize an action.
+[Run](#install-and-run) · [Operations](#two-explicit-diagnostic-operations) · [Research profile](#research-profile)
 
 ## Organization
 
@@ -48,6 +17,45 @@ The company's development direction connects measurement, state estimation and s
 | **Notations Laboratories** | Research and experimental validation in scientific computing, measurement, physics and chemistry modelling, materials and simulation. |
 
 **Repository role:** Fault Monitor contributes residual and change detection to **Notations Laboratories**, supporting diagnostic work for **Notations Manufacturing**. Its statistical outputs can inform broader state estimation workflows; an anomaly is not a confirmed physical fault or permission to control machinery.
+
+## Instrument role
+
+**Notation Systems — Frontier Tooling and Instrumentation for Digital Futures.** FaultSense provides residual statistics and explicit diagnostic transitions, not physical fault confirmation or equipment control. [Notations Systems Terminal](https://github.com/atomtrapping/Notations-Systems-Terminal) coordinates supported workflows while this provider retains its mathematics.
+
+The current repository is `Notations-FaultSense-RunTime`; FDIR / `fdir`, existing status codes and historical contracts remain. The firm's operational products and Notations Gaming' creative/IP projects retain separate state, evidence and release authority. [Current organization](#organization).
+
+| NET micro-tool | Identity and scope |
+| --- | --- |
+| User-facing name | **FaultSense** (historical display: Fault Monitor) |
+| Proposed NET operation family | `diagnostics.faults` |
+| Implementation repository | `Notations-FaultSense-RunTime` |
+| Existing provider and import | Fault Detection and Isolation Runtime / FDIR; `fdir` |
+| Existing operations | `evaluate_residual` and `cusum_step` |
+| Current boundary | Statistical anomaly detection; physical fault confirmation and cause isolation are not implemented |
+
+`diagnostics.faults` is the agreed NET-facing target, **not a newly installed
+command, automatic diagnosis service or live equipment-control adapter**. Use
+the standalone functions and examples below. A threshold crossing is an anomaly,
+not proof of a broken component; a nominal result is not proof of correct operation.
+
+NET owns session composition and dispatch; this provider owns residual statistics
+and explicit CUSUM transitions. Callers own the chosen scalar stream and prior
+monitor state. Evidence, operation specifications, execution attempts and
+verification records remain distinct. Imports, contracts, existing status codes
+and licence terms are unchanged.
+
+[Notations Systems Terminal (CIW)](https://github.com/atomtrapping/Notations-Systems-Terminal) · [Stack placement and ownership](docs/STACK.md) · [License](LICENSE)
+
+FDIR is a bounded statistical diagnostics instrument. It evaluates estimator innovations and scalar residual streams, preserving the inputs, their declared identities, the chosen thresholds, and each sequential transition. The current foundation implements anomaly detection; **physical fault confirmation and cause isolation are not implemented**.
+
+The `fdir` Python package provides:
+
+| Operation | Implemented behavior |
+| --- | --- |
+| `evaluate_residual` | Cholesky whitening, marginal normalization, normalized innovation squared (NIS), and explicit threshold comparison |
+| `cusum_step` | Pure positive, negative, or two-sided CUSUM transition with explicit prior state, drift, threshold, and optional post-alarm reset |
+
+Outputs use `nominal` and `statistical_anomaly`. A `nominal` result means the chosen test did not cross its threshold on that input; it does not prove correct operation. An anomaly does not identify a failed sensor, prove a physical defect, or authorize an action.
 
 ## Two explicit diagnostic operations
 
@@ -100,7 +108,7 @@ Thresholds are caller-supplied. The instrument makes no automatic chi-square cal
 
 ## System role
 
-GSIE can provide innovations and their innovation covariance. FDIR computes diagnostics over those inputs. SET retains offline evaluation and benchmarking; Notations Engineering Terminal (CIW) can display and inspect diagnostic records. FDIR does not change estimator state, remove observations, shut down sensors, admit evidence, or issue controls. See [STACK_ROLE.md](STACK_ROLE.md).
+GSIE can provide innovations and their innovation covariance. FDIR computes diagnostics over those inputs. SET retains offline evaluation and benchmarking; Notations Systems Terminal (CIW) can display and inspect diagnostic records. FDIR does not change estimator state, remove observations, shut down sensors, admit evidence, or issue controls. See [STACK_ROLE.md](STACK_ROLE.md).
 
 This repository provides standalone functions and a synthetic replay. The GSIE, SET, and CIW positions describe ownership boundaries; this release does not contain live adapters to those repositories.
 
@@ -116,6 +124,14 @@ python examples/exchange.py
 The example exports NIS as a dimensionless scalar diagnostic, with score covariance `not_applicable`, and retains the full input innovation covariance and residual diagnostics inside the computation record. It uses a synthetic all-zero revision and explicit timestamp; neither is an attestation. Result, operation, execution, and source references remain distinct; no verification record is fabricated. This demonstrates exchange conformance, not native execution in CIW or independent scientific verification.
 
 See [CONTRACT.md](CONTRACT.md) for validated inputs and transition semantics and [docs/NUMERICS.md](docs/NUMERICS.md) for equations, numerical limits, and analytical verification.
+
+## Research profile
+
+**Question:** what does a statistical disagreement establish, and what remains ambiguous? The current innovation and CUSUM specimens let the programme test threshold behavior, covariance assumptions, sequence history and retained diagnostic state.
+
+Future evaluation should distinguish simulated ground truth, measured observations and expert hypotheses; report false alarms and missed detections only against a defined labelled reference. A detector's output is not a root-cause finding. Measure end-to-end cost and rework without promoting unknown telemetry to zero.
+
+[Historical research protocol](https://github.com/atomtrapping/Notations-Systems-Terminal/blob/b41b84922d4963a9206202029afd1e78b9451f9c/RESEARCH_PROGRAMME.md). General inference, new language providers and CUDA acceleration remain separate work. This documentation changes no numerical implementation, tests, thresholds, permissions or release status and reports no new qualification run.
 
 ## License
 
